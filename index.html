@@ -9,7 +9,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" crossorigin="anonymous" />
-    
+    <style>
+        #particles-js{
+            background: #25252a;
+            height: 100vh;
+            position: absolute;
+            width: 100%;
+            opacity: 0.3;
+            z-index: 5;
+        }
+    </style>
 
 </head>
 
@@ -62,6 +71,7 @@
         </header>
         <section id="portfolio">
             <div class="container">
+               
                 <div style="margin-bottom: 5rem">
                     <h2 class="text-uppercase">About me</h2>
                     <hr class="smile-dark">
@@ -74,12 +84,13 @@
 
                     <div class="item"><img src="img/submarine.png" alt=""></div>
                     <div class="item"><img src="img/safe.png" alt=""></div>
-
                 </div>
+                
             </div>
         </section>
         <section id="about">
             <div class="container clearfix">
+               <div id="particles-js"></div>
                 <h2 class="text-uppercase">About me</h2>
                 <hr class="smile-light">
                 <div class="col-about">
@@ -131,13 +142,15 @@
                 <a href="https://www.linkedin.com/in/musa-%C5%9Fahin-kundakc%C4%B1-2184271b4/" target="_blank"><i class="fab fa-linkedin-in linkedin"></i></a>
                 <a href="https://github.com/musasahinkundakci" target="_blank"><i class="fab fa-github github"></i></a>
                 <a href="https://www.facebook.com/jelibo123/" target="_blank"><i class="fab fa-facebook-f facebook"></i></a>
-                <a href="https://www.instagram.com/musasahin.21/?hl=tr" target="_blank"><i class="fab fa-instagram instagram" target="_blank"></i></a>
+                <a href="https://www.instagram.com/musasahin.21/?hl=tr"><i class="fab fa-instagram instagram" target="_blank"></i></a>
                 <a href="https://www.hackerrank.com/musa_20" target="_blank"><i class="fab fa-hackerrank hackerrank"></i></a>
                 <a href="https://mirror-h.org/search/hacker/49386/" target="_blank"><i class="fas fa-skull mirror"></i></a>
             </div>
         </footer>
 
     </div>
+     <script src="particles.js"></script>
+    <script src="app.js"></script>
     <script src="anime.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"></script>
@@ -148,15 +161,16 @@
             translateX:300,
             
             translateY: 0,
-            rotateZ: 360, 
-            scale: 1, 
-            duration: 3000, 
+            rotateZ: 360, //döndür
+            scale: 1, //büyüttük
+            duration: 3000, //3saniye
             
             direction:"alternate",
             easing: 'easeInOutSine',
             
         });
-
+        //scrola tetkiklendiğinde  yani oyanyınca
+        //ne kadar olduğunu consolde window.screenTop
         $(".backtotop").hide();
         $(function() {
             $(window).scroll(function() {
@@ -217,7 +231,7 @@
             autoplay: true,
             autoplayTimeout: 2000,
             stagePadding: 60,
-            dots:true,
+            //dots:false,
             responsive: {
                 0: {
                     items: 1
